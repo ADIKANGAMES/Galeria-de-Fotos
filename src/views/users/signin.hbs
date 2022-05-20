@@ -1,0 +1,34 @@
+<style>
+    .row{
+       align-items: center;
+       text-align: center; 
+       display: block;
+       margin-top: 150px; 
+    } 
+</style>
+
+
+<div class="row">
+    <div class="col-md-4 mx-auto"   ; >
+        <div class="card"   style="background-color:rgb(70, 76, 189) ;">
+            <div class="card-header"  style="color:white ;" >
+              <h4> <b>  Iniciar Sesion</b></h4>
+            </div>
+              <!-- <img src=".../OIP.jpg" class="rounded-circle mx-auto d-block m-4"> --> 
+            <div class="card-body">
+                <!--Formulario-->
+                <form action="/users/signin" method="POST">
+                    <div class="form_group">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div> <br>
+                    <div class="form_group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                    </div> <br>
+                    <button  class="btn btn-success btn-block">
+                        Iniciar Sesion
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

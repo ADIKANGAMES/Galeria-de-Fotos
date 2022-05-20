@@ -1,0 +1,56 @@
+<style>
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+.columna{
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 4px;
+}
+.columna img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .3s ease;
+}
+.columna img:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transform: scale(1.1);
+}
+@media screen and (max-width: 800px){
+    .columna{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 600px){
+    .columna{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+</style>
+<section class="galeria">
+    {{#each photos}}
+    <div class="columna">
+    <div class="card animated fadeInDown">
+        <a href="{{imageURL}}" class="fancybox" data-fancybox="gallery">
+            <img src="{{imageURL}}" alt="" width="300px" height="200px">
+        </a>
+        <div class="card-body">
+        <h5 class="card-title"> {{title}} </h5>
+        <p class="card-text"> {{description}} </p>
+        </div>
+    </div>
+    </div>
+    {{/each}}
+</section>
+
+
+
+
+

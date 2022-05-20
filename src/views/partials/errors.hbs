@@ -1,0 +1,19 @@
+<!--Comprueba las variables de los errores-->
+
+{{#if error}}<!--Bucle FOR que recorrera para mostras los errores-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{error}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+{{#each errors}}<!--Bucle FOR que recorrera para mostras los errores-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}

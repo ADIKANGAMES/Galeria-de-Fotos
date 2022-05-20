@@ -1,0 +1,40 @@
+<style>
+    .row{
+       align-items: center;
+       text-align: center; 
+       display: block;
+       margin-top: 150px; 
+    } 
+</style>
+
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card"  style="background-color:rgb(70, 76, 189) ;" >
+            <div class="card-header"   style="color:white ;">
+              <h4> <b>    Registra una cuenta </b></h4>
+            </div>
+            <div class="card-body">
+                <!--Formulario-->
+                <form action="/users/signup" method="POST">
+                    <div class="form_group">
+                        <input type="text" class="form-control" name="name" placeholder="Ingresa tu nombre"  value="{{name}}" >
+                    </div> <br>
+                    <div class="form_group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}" >
+                    </div> <br>
+                    <div class="form_group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                    </div> <br>
+                    <div class="form_group">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirmar Contraseña">
+                    </div> <br>
+                    <button  class="btn btn-success btn-block">
+                        Registrate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
